@@ -1,1 +1,89 @@
-<h1> Home Page </h1>
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'base.html' %}
+{% load static %}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <meta charset="UTF-8">
+
+    {% block tags %}
+    {% endblock %}
+
+    {% block title %}
+    <title>PDE </title>
+    {% endblock %}
+
+    {% block extra_css %}
+    	<link rel="stylesheet" href="{% static 'pages/css/index.css' %}">
+    {% endblock %}
+
+ </head>
+<body>
+
+    {% block content %}
+        <div class="main__container">
+            <div class="container__top">
+                <img class="img__top" alt="top-img" src="{% static 'pages/img/world1.jpg' %}" />
+                <div class="int__container">
+                    AGE OF INTELLIGENCE
+                </div>
+                <div class="card__container">
+                    <div class="card">
+                        <h1> Networking </h1>
+                    </div>
+                    <div class="card">
+                        <h1> Machine Learning </h1>
+                    </div>
+                    <div class="card">
+                        <h1> Digital Marketing </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="sol__container">
+                <h1> Solutions </h1>
+                <div class="sol__wrapper">
+                    {% for solution in solutions %}
+                    {% if solution.solution_type == 'Home' %}
+                    <div class="sol__card">
+                        <img src="{{ solution.img.url }}" alt="sol-img">
+                        <div class="sol__name">
+                            {{ solution.name }}
+                        </div>
+                        <div class="sol__desc">
+                            {{ solution.desc }}
+                        </div>
+                        
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                    {% for solution in solutions %}
+                    {% if solution.solution_type == 'Home' %}
+                    <div class="sol__card">
+                        <img src="{{ solution.img.url }}" alt="sol-img">
+                        <div class="sol__name">
+                            {{ solution.name }}
+                        </div>
+                        <div class="sol__desc">
+                            {{ solution.desc }}
+                        </div>
+                        
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="more__container">
+                    <a href="{% url 'solutions_view' %}" title="">
+                        More
+                    </a>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+
+    {% block extra_js %}
+    {% endblock %}
+
+</body>
+
+</html>

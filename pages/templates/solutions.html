@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'base.html' %}
+{% load static %}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <meta charset="UTF-8">
+
+    {% block tags %}
+    {% endblock %}
+
+    {% block title %}
+    <title>PDE | Solutions </title>
+    {% endblock %}
+
+    {% block extra_css %}
+    	<link rel="stylesheet" href="{% static 'pages/css/solutions.css' %}">
+    {% endblock %}
+
+ </head>
+<body>
+
+    {% block content %}
+        <div class="main__container">          
+            {% for solution in solutions %}
+                <div class="solutions__wrapper">
+                    <div class="solutions__card">
+                        <img  class="solutions__image" src="{{ solution.img.url }}" alt="sol-img">
+                        <div class="solutions__content">
+                            <div class="solutions__name">
+                                {{ solution.name }}
+                            </div>
+                            <div class="solutions__desc">
+                                {{ solution.desc }}
+                            </div>
+                        </div>
+                    </div>
+                </div>            
+            {% endfor %}
+        </div>
+    {% endblock %}
+
+    {% block extra_js %}
+    {% endblock %}
+
+</body>
+
+</html>

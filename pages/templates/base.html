@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <meta charset="UTF-8">
+
+    {% block tags %}
+    {% endblock %}
+
+    {% block title %}
+    <title>PDE </title>
+    {% endblock %}
+
+    <link rel="icon" href="{% static 'pages/img/logo_icon.png' %}">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <script src="https://kit.fontawesome.com/86f0938acd.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* width */
+        ::-webkit-scrollbar {
+          width: 6px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+          box-shadow: inset 0 0 5px #fff;
+          border-radius: 10px;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+          background: #000046;
+          border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+          background: #53526c;
+        }
+
+</style>
+
+    {% block extra_css %}
+
+    {% endblock %}
+
+ </head>
+<body class="body">
+
+    {% include 'navbar.html' %}
+
+    {% block content %}
+        Some Content
+    {% endblock %}
+
+    {% include 'footer.html' %} 
+
+    {% block extra_js %}
+    {% endblock %}
+    
+</body>
+
+</html>

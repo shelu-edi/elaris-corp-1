@@ -23,7 +23,9 @@ from pages.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    path('', homepage,  name='home_view'),
+    path('', HomeView.as_view(),  name='home_view'),
+    path('solutions', SolutionView.as_view(),  name='solutions_view'),
+    path('about', about,  name='about_view'),
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL,
