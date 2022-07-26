@@ -1,7 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views import View
+from django.core.mail import send_mail
 
 from solutions.models import *
+from contact.models import *
+
+from contact.forms import *
 
 # Create your views here.
 
@@ -36,6 +40,51 @@ class SolutionView(View):
 
 def about(request):
 	template = 'about.html'
+	context = {}
+
+	return render(request, template, context)
+
+class ContactView(View):
+	template_name = 'contact.html'
+
+	def get(self, request):
+		form = ContactUsForm()
+
+		context = {
+			'form': form,
+		}
+
+		return render(request, self.template_name, context)
+
+	def post(self, request):
+		form = ContactUsForm(request.POST)
+
+		if request.method == 'POST':
+			if form.is_valid():
+				form.save()
+				subject = 'Contact Us'
+				body = {
+					'first_name': form.cleaned_data['first_name'], 
+	                'last_name': form.cleaned_data['last_name'], 
+	                'email': form.cleaned_data['email'], 
+	                'details': form.cleaned_data['details'],
+				}
+				message = "\n".join(body.values())
+				send_mail(subject, message, 'eavhshelumiel@gmail.com', ['eavshelumiel@gmail.com'])
+				form = ContactUsForm()
+			else:
+				form = ContactUsForm()
+		else:
+			form = ContactUsForm()
+
+		context = {
+			'form': form,
+		}
+
+		return redirect(thanks)
+
+def thanks(request):
+	template = 'thanks.html'
 	context = {}
 
 	return render(request, template, context)

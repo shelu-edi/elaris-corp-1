@@ -2,11 +2,61 @@
 	margin: 0 0 400px 0;
 }
 
-/* Solutions */
-
-.solutions__wrapper{
+/* Top Container */
+.top__container{
 	display: flex;
     flex-direction: column;
+    height: 600px;
+    margin: 0 auto;
+    padding: 0 10px;
+ }
+
+.top__container img{
+	width: 98%;
+	height:500px;
+	align-self: center;
+	border-radius: 20px;
+	animation: fadeIn 1s;
+	position: absolute;
+	object-fit: cover;
+	/* filter: blur(1px);
+    -webkit-filter: blur(1px); */
+}
+
+.top__head {
+	font-size: 5rem;
+	text-align: center;
+	z-index:900;
+	color: #66aec7;
+	animation: fadeIn 2s;
+}
+
+.top__desc {
+	z-index: 900;
+	padding: 50px 0 0 0;
+	font-size: 1.5rem;
+	text-align: center;
+	color: #66aec7;
+	animation: fadeIn 3s;
+	width: 500px;
+	align-self: center;
+}
+
+.slider__wrapper{
+	display: flex;
+	z-index: 900;
+	width: 100%;
+	justify-content: center;
+}
+
+/* Solutions */
+
+.solutions__container{	
+	display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.solutions__wrapper{
     height: 600px;
     margin: 0 auto;
     padding: 0 10px;
@@ -16,35 +66,53 @@
 
 .solutions__card{
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	width: 98%;
+	grid-template-columns: 1fr;
+	/* width: 100%; */
 	height: 90%;
 	/* border: 1px solid black; */
 	justify-content: center;
 	animation: fadeIn 2s;
+	background: rgba(83, 82, 108, .1);
+	border-radius: 5px;
+	box-shadow: 2px 1px 2px #66aec7;
 }
 
-.solutions__card:nth-child(2){
+.div__1	{
+	height: 20px;
+	animation: fadeIn 2.5s;
+}
+
+.div__2 {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	width: 100%;
 	animation: fadeIn 3s;
 }
 
-.solutions__image {
-	width: 500px;
-	height: 350px;
-	margin: 50px 0 0 50px;
-	border-radius: 10px;
+.div__3 {
+	padding: 0 0 0 30px;
+	animation: fadeIn 3.5s;
 }
 
-.solutions__name {
-	padding: 40px 0 0 0;
-	font-size: 2.5rem;
-	text-align: center;
+.solutions__name{
+	font-size: 1.2rem;
+	color: #66aec7;
+	margin: 20px 0 0 20px;
+}
+
+.solutions__image {
+	width: 300px;
+	height:280px;
+	margin: 0 10px 0 20px;
+	border-radius: 5px;
 }
 
 .solutions__desc {
-	padding: 40px 10px 0;
+	width: 400px;
 	font-size: 1rem;
 	text-align: justify;
+	padding: 0 10px 0 0;
+	color: #53526c;
 }
 
 /* Animations */

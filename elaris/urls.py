@@ -26,7 +26,8 @@ urlpatterns = [
     path('', HomeView.as_view(),  name='home_view'),
     path('solutions', SolutionView.as_view(),  name='solutions_view'),
     path('about', about,  name='about_view'),
-
+    path('contact', ContactView.as_view(),  name='contact_view'),
+    path('thanks', thanks,  name='thanks_view'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL,
                                                                            document_root=settings.STATIC_ROOT)

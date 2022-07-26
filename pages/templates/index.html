@@ -23,7 +23,7 @@
 
     {% block content %}
         <div class="main__container">
-            <div class="container__top">
+            <div class="container__top"  data-aos="fade">
                 <img class="img__top" alt="top-img" src="{% static 'pages/img/world1.jpg' %}" />
                 <div class="int__container">
                     AGE OF INTELLIGENCE
@@ -42,7 +42,7 @@
             </div>
             <div class="sol__container">
                 <h1> Solutions </h1>
-                <div class="sol__wrapper">
+                <div class="sol__wrapper"  data-aos="fade-right">
                     {% for solution in solutions %}
                     {% if solution.solution_type == 'Home' %}
                     <div class="sol__card">

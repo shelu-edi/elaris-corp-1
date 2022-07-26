@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <meta charset="UTF-8">
+
+    {% block tags %}
+    {% endblock %}
+
+    {% block title %}
+    <title>PDE | Contact Us</title>
+    {% endblock %}
+
+    {% block extra_css %}
+    	<link rel="stylesheet" href="{% static 'pages/css/contact.css' %}">
+    {% endblock %}
+
+ </head>
+<body>
+
+    {% block content %}
+        <div class="main__container">
+            <div class="top__head">
+                <div class="line__1">
+                    Have A Doubt?
+                </div>
+                <div class="line__2">
+                    Contact Us
+                </div>
+            </div>
+            <div class="middle__div">
+                <div class="form__div">
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form | crispy }}
+                        <input class="form__btn" type="submit" value="Submit">
+                    </form>
+                </div>
+                <div class="info__div">
+                    <div class="container__1">
+                        Some Stuff
+                    </div>
+                    <div class="container__2">
+                        Some Things
+                    </div>
+                    <div class="container__3">
+                        Some
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+
+    {% block extra_js %}
+    {% endblock %}
+
+</body>
+
+</html>
