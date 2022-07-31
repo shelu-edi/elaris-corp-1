@@ -15,14 +15,48 @@
     {% endblock %}
 
     {% block extra_css %}
-    	<link rel="stylesheet" href="{% static 'pages/css/solutions.css' %}">
+    	<link rel="stylesheet" href="{% static 'pages/css/about.css' %}">
     {% endblock %}
 
  </head>
 <body>
 
     {% block content %}
-        About
+        <div class="main__container">
+            <div class="top__div">
+                <div class="div__1">
+                    Who We Are ?
+                </div>
+                <div class="div__2">
+                    P.D. Elaris and Company is a dynamic technological solutions provider that takes pride in its capacity to offer specialised solutions to address specific company needs.
+                </div>
+            </div>
+            <div class="crew__div">
+                <div class="crew__head">
+                    Our Crew
+                </div>
+                <div class="crew__wrapper">
+                    <div class="crew__card">
+                        <div class="crew__name">
+                            Some One
+                        </div>
+                        <div class="crew__title">
+                            Some Title
+                        </div>
+                        <img class="crew__img" src="{% static 'pages/img/img.jpg' %}" alt="crew-img">
+                    </div>
+                    <div class="crew__card">
+                        Some One
+                    </div>
+                    <div class="crew__card">
+                        Some One
+                    </div>
+                    <div class="crew__card">
+                        Some One
+                    </div>
+                </div>
+            </div>
+        </div>
     {% endblock %}
 
     {% block extra_js %}

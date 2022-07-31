@@ -81,7 +81,7 @@ class ContactView(View):
 			'form': form,
 		}
 
-		return redirect(thanks)
+		return render(request, self.template_name, context)
 
 def thanks(request):
 	template = 'thanks.html'

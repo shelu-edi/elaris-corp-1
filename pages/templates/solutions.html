@@ -27,13 +27,21 @@
                     <div class="top__head">
                         Elaris Solutions
                     </div>
-                <img src="https://images.unsplash.com/photo-1489875347897-49f64b51c1f8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">
+                <img src="{% static 'pages/img/back_1.png' %}" alt="">
                <!-- <div class="slider__wrapper">
                     {% include 'solutions_slider.html' %}
                </div> -->
                
                <div class="top__desc">
-                   dynamic technological solutions provider that takes pride in its capacity to offer specialised solutions to address specific company needs.
+                   <div class="top__1">
+                       <img class="" alt="top-img" src="{% static 'pages/img/cloud-computing.png' %}" />
+                   </div>
+                   <div class="top__2">
+                       dynamic technological solutions provider that takes pride in its capacity to offer specialised solutions to address specific company needs.
+                   </div>
+                   <div class="top__3">
+                       <img class="" alt="top-img" src="{% static 'pages/img/design-software.png' %}" />
+                   </div>
                </div>
             </div>          
             <div class="solutions__container">
@@ -51,9 +59,9 @@
                                     {{ solution.desc }}
                                 </div>
                             </div>
-                            <div class="div__3">
+                            <!-- <div class="div__3">
                                 Some Stuff
-                            </div>
+                            </div> -->
                         </div>
                     </div>            
                 {% endfor %}

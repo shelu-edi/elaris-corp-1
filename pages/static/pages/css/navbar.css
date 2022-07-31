@@ -4,8 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.2rem;
-    position: absolute;
+    font-size: 1.2rem;    
     top: 0;
     z-index: 10000;
     border: none;
@@ -102,6 +101,7 @@
         width: 100%;
         max-width: 1300px;
         padding: 0;
+        opacity: .9;
     }
 
     .navbar__menu {
@@ -153,6 +153,8 @@
     .navbar__btn {
         padding-bottom: 2rem;
         padding-left: 0;
+        width: 90%;
+        margin-left: 20px;
     }
 
     .button {
@@ -205,6 +207,10 @@
 }
 
 @media screen and (max-width: 480px){
+    .navbar__container {
+        width: 110%;
+    }
+
     .navbar__btn {
         padding-bottom: 2rem;
         padding-left: 2rem;

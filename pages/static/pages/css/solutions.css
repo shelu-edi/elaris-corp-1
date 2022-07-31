@@ -24,6 +24,7 @@
 }
 
 .top__head {
+	margin: 50px 0 0 0;
 	font-size: 5rem;
 	text-align: center;
 	z-index:900;
@@ -36,10 +37,43 @@
 	padding: 50px 0 0 0;
 	font-size: 1.5rem;
 	text-align: center;
-	color: #66aec7;
-	animation: fadeIn 3s;
-	width: 500px;
+	color: #66aec7;	
+	/* width: 500px; */
 	align-self: center;
+	align-items: center;
+  	justify-content: center;
+  	margin: 0 0;
+  	height: 100%;
+  	width: 100%;
+}
+
+.top__1 {
+	width: 10%;
+	float: left;
+	animation: fadeIn 3s;
+}
+
+.top__1 img {
+	width:100px;
+	height:100px;
+}
+
+.top__2 {
+	width:60%;
+	float: left;
+	margin-left: 300px;
+	animation: fadeIn 3.5s;
+}
+
+.top__3 {
+	width: 20%;
+	float: left;
+	animation: fadeIn 4s;
+}
+
+.top__3 img {
+	width:100px;
+	height:100px;
 }
 
 .slider__wrapper{
@@ -68,7 +102,7 @@
 	display: grid;
 	grid-template-columns: 1fr;
 	/* width: 100%; */
-	height: 90%;
+	height: 80%;
 	/* border: 1px solid black; */
 	justify-content: center;
 	animation: fadeIn 2s;
@@ -105,13 +139,14 @@
 	height:280px;
 	margin: 0 10px 0 20px;
 	border-radius: 5px;
+	object-fit: cover;
 }
 
 .solutions__desc {
 	width: 400px;
 	font-size: 1rem;
 	text-align: justify;
-	padding: 0 10px 0 0;
+	padding: 0 30px 0 0;
 	color: #53526c;
 }
 
@@ -120,4 +155,43 @@
 @keyframes fadeIn {
 	0% { opacity: 0; }
     100% { opacity: 1; }
+}
+
+@media screen and (max-width:960px) {
+	.solutions__container {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media screen and (max-width:480px) {
+
+	.top__container {
+		height:350px;
+	}
+
+	.top__container img {
+		height:300px;
+	}
+
+	.top__head {
+		font-size: 2rem;
+	}
+
+	.top__desc {
+		font-size: 1rem;
+		text-align: justify;
+		width: 100%;
+	}
+
+	.solutions__card {
+		height: 100%;
+	}
+
+	.div__2 {
+		grid-template-columns: 1fr;
+	}
+
+	.solutions__desc {
+		padding-left: 10px;
+	}
 }

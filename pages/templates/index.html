@@ -11,7 +11,7 @@
     {% endblock %}
 
     {% block title %}
-    <title>PDE </title>
+    <title>PDE | Age Of Intelligence </title>
     {% endblock %}
 
     {% block extra_css %}
@@ -24,39 +24,36 @@
     {% block content %}
         <div class="main__container">
             <div class="container__top"  data-aos="fade">
-                <img class="img__top" alt="top-img" src="{% static 'pages/img/world1.jpg' %}" />
+                <img class="img__top" alt="top-img" src="{% static 'pages/img/back_1.png' %}" />
                 <div class="int__container">
                     AGE OF INTELLIGENCE
                 </div>
                 <div class="card__container">
-                    <div class="card">
-                        <h1> Networking </h1>
+                    <div class="card" id="carid-1">
+                        <img class="card__img" alt="top-img" src="{% static 'pages/img/data.png' %}" />
+                        <h1> Data Analytics </h1>
                     </div>
-                    <div class="card">
-                        <h1> Machine Learning </h1>
+                    <div class="card" id="carid-2">
+                        <img class="card__img" alt="top-img" src="{% static 'pages/img/cloud-service.png' %}" />
+                        <h1> NetWork Solutions </h1>
                     </div>
-                    <div class="card">
+                    <div class="card" id="carid-3">
+                        <img class="card__img" alt="top-img" src="{% static 'pages/img/digital-marketing.png' %}" />
                         <h1> Digital Marketing </h1>
+                    </div>
+                     <div class="card" id="carid-4">
+                        <img class="card__img" alt="top-img" src="{% static 'pages/img/analysis.png' %}" />
+                        <h1> Training & Development </h1>
+                    </div>
+                     <div class="card" id="carid-5">
+                        <img class="card__img" alt="top-img" src="{% static 'pages/img/cryptocurrency.png' %}" />
+                        <h1> Bloackchain Technology </h1>
                     </div>
                 </div>
             </div>
             <div class="sol__container">
                 <h1> Solutions </h1>
-                <div class="sol__wrapper"  data-aos="fade-right">
-                    {% for solution in solutions %}
-                    {% if solution.solution_type == 'Home' %}
-                    <div class="sol__card">
-                        <img src="{{ solution.img.url }}" alt="sol-img">
-                        <div class="sol__name">
-                            {{ solution.name }}
-                        </div>
-                        <div class="sol__desc">
-                            {{ solution.desc }}
-                        </div>
-                        
-                    </div>
-                    {% endif %}
-                    {% endfor %}
+                <div class="sol__wrapper"  data-aos="fade">
                     {% for solution in solutions %}
                     {% if solution.solution_type == 'Home' %}
                     <div class="sol__card">
