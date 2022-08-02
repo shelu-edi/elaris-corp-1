@@ -1,5 +1,6 @@
 .navbar {
-    /* background: #1C2331; */
+    /* background: #1C2331; */    
+    position: sticky;
     height: 80px;
     display: flex;
     justify-content: center;

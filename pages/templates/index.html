@@ -51,8 +51,24 @@
                     </div>
                 </div>
             </div>
-            <div class="sol__container">
+            <div class="sol__container">                
                 <h1> Solutions </h1>
+                <div class="sol__top">
+                    <div class="top__1">
+                        <div class="top__1__1">
+                            Let Us 
+                        </div>
+                        <div class="top__1__2">
+                            Take Your Business To
+                        </div>
+                        <div class="top__1__3">
+                            The Next Level
+                        </div>
+                    </div>
+                    <div class="top__2">
+                        <img class="" alt="top-img" src="{% static 'pages/img/businessman.png' %}" />
+                    </div>
+                </div>
                 <div class="sol__wrapper"  data-aos="fade">
                     {% for solution in solutions %}
                     {% if solution.solution_type == 'Home' %}

@@ -1,5 +1,5 @@
 .main__container {
-	margin: 0 0 400px 0;
+	margin: 0 0 1000px 0;
 }
 
 /* Top Container */
@@ -116,6 +116,44 @@
 	font-weight: 400;
 }
 
+.sol__top {
+	display:grid;
+	grid-template-columns: 1fr 1fr;
+	margin: 20px 0 50px 20px;
+}
+
+.top__1 {
+	padding-left: 50px;
+}
+
+.top__1__1 {
+	font-size: 5rem;	
+	color: #FC00FF;
+	animation: moveToRight 2s;
+	padding: 10px 0 10px 0;
+}
+
+.top__1__2 {
+	font-size: 3rem;
+	color: #80D0C7;
+	animation: moveToRight 3s;
+}
+
+.top__1__3 {
+	font-size:6rem;
+	font-weight: 600;
+	color: #00DBDE;
+	padding: 10px 0 10px 0;
+	animation: moveToRight 4s;
+}	
+
+.top__2 img{
+	padding: 20px 0 20px 50px;
+	width: 400px;
+	height: 400px;
+	animation: fadeIn 5s;
+}
+
 /* Solutions Card */
 
 .sol__card {
@@ -227,3 +265,12 @@
 	0% { opacity: 0; }
     100% { opacity: 1; }
 }
+
+@keyframes moveToRight {
+	0% {
+		transform: translateX(-100px);
+    }
+    100% {
+    	transform: translateX(0px);
+    }
+}            
