@@ -43,7 +43,44 @@
                        <img class="" alt="top-img" src="{% static 'pages/img/design-software.png' %}" />
                    </div>
                </div>
-            </div>          
+            </div>   
+
+            <!-- Slide -->
+            <div class="slideshow__container">
+                
+                <div class="slide fade">
+                    <div class="num__text"></div>
+                    <img src="{% static 'pages/img/cloud-computing.png' %}" alt="img-1">
+                    <div class="text">
+                        Some Text
+                    </div>
+                </div>
+                <div class="slide fade">
+                    <div class="num__text"></div>
+                    <img src="{% static 'pages/img/design-software.png' %}" alt="img-2">
+                    <div class="text">
+                        Some Text
+                    </div>
+                </div>
+                <div class="slide fade">
+                    <div class="num__text"></div>
+                    <img src="{% static 'pages/img/cloud-computing.png' %}" alt="img-3">
+                    <div class="text">
+                        Some Text
+                    </div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
+            </div>
+
+            <div class="dot__container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+
             <div class="solutions__container">
                 {% for solution in solutions %}
                     <div class="solutions__wrapper">
@@ -66,10 +103,29 @@
                     </div>            
                 {% endfor %}
             </div>
+
+            <!-- Contact -->
+            <div class="contact__div">
+                <div class="contact__desc">
+                    <div class="contact__top">
+                        <div class="contact__top__1">
+                            Interested ?
+                        </div>
+                        <div class="contact__top__2">
+                            Let Us Know
+                        </div>
+                    </div>
+                    <div class="contact__btn">
+                        <a href="{% url 'contact_view' %}" title="contact-btn">Contact Us</a>
+                    </div>
+                </div>
+                <img src="{% static 'pages/img/phone-call.png' %}" alt="img-1">
+            </div>
         </div>
     {% endblock %}
 
     {% block extra_js %}
+        <script src="{% static 'pages/js/solutions.js' %}" ></script>
     {% endblock %}
 
 </body>

@@ -91,6 +91,78 @@
 	color: #1c92d2;
 }
 
+/* About Container */
+.about__container {
+	display:grid;
+	grid-template-columns: 1fr 1fr;
+	margin: 50px 0 0 100px;
+	height: 100%;
+	box-shadow: 2px 1px 2px #66aec7;
+	width: 90%;
+	border-radius: 20px;
+}
+
+.about__top {
+	height: 400px;
+	margin: 20px 0 20px 100px;
+	grid-template-rows: 1fr 1fr;
+}
+
+.about__top__1 {
+	font-size: 3rem;
+	color: #EE74E1;
+	animation: moveToRight 2s;
+}
+
+.about__top__2 {
+	font-size: 5rem;
+	padding: 20px 0 0 0;
+	color: #3EECAC;
+	animation: moveToRight 3s;
+}
+
+.about__btn__wrapper {
+	margin: 20px 0 40px 100px;
+	padding: 12px 0 0 0;
+	text-align: center;
+	animation: moveToRight 3.5s;
+	background: #1c92d2;
+	width: 120px;
+	height: 50px;
+	border-radius: 10px;
+}
+
+.about__btn {
+	color: #fff;
+}
+
+.about__btn__wrapper:hover {
+	text-decoration: none;
+	background: #fff;
+	transition: all .5s ease-in-out;
+	color: #1c92d2;	
+	border: 1px solid #1c92d2;
+	cursor: pointer;
+}
+
+.about__btn__wrapper:hover a{
+	text-decoration: none;
+	color: #1c92d2
+}
+
+.about__img {
+	animation: fadeIn 3s;
+	padding: 20px 0 0 50px;
+}
+
+.about__img img {
+	width:400px;
+	height:400px;
+	animation: fadeIn 5s;
+}
+
+
+
 /* Solutions Container */
 
 .sol__container {
@@ -119,7 +191,8 @@
 .sol__top {
 	display:grid;
 	grid-template-columns: 1fr 1fr;
-	margin: 20px 0 50px 20px;
+	margin: 20px 0 50px 20px;	
+    border-radius: 20px;
 }
 
 .top__1 {
@@ -231,7 +304,7 @@
 
 @media screen and (max-width:480px) {
 	.main__container {
-		margin-bottom: 1700px;
+		margin-bottom: 2900px;
 	}
 
 	.container__top {
@@ -247,6 +320,32 @@
 		text-align: center;
 	}
 
+	.about__container, .sol__top {
+		grid-template-columns: 1fr;
+		margin-left: 10px;
+	}
+
+	.about__top, .sol__top__1 {
+		grid-template-columns: 1fr;
+		margin-left: 10px;
+		margin-bottom: 0;
+		height: 200px;
+	}
+
+	.about__top__1, .top__1__1 {
+		font-size: 2rem;
+	}
+
+	.about__top__2, .top__1__2 {
+		font-size: 2.5rem;
+	}
+
+	.about__img img, .top__2 img {
+		width :200px;
+		height :200px;
+		margin: 0 0 10px 0;
+	}
+
 	.card__container {
 		grid-template-columns: 1fr;
 		margin-left: 30px;
@@ -255,7 +354,6 @@
 	.sol__wrapper {
 		grid-template-columns: 1fr 1fr;
 	}
-
 
 }
 
