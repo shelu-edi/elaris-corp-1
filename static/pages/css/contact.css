@@ -33,7 +33,6 @@
 }
 
 .middle__div {
-	padding: 0 auto;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	margin: 20px 0 0 0;
@@ -78,6 +77,7 @@
 	text-align: center;
 	color: #333399;
 	animation: fadeIn 2.5s;
+	margin: 50px 0 0 0;
 }
 
 .container__2 {

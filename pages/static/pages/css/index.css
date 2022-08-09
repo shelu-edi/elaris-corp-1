@@ -257,6 +257,16 @@
 	color: #53526c;
 }
 
+.sol__cat {
+	margin: 20px 0 0 20px;
+	padding: 0 0 0 10px;
+	width: 100px;
+	border-radius: 10px;
+	font-size: .8rem;
+	background-color: purple;
+	color: #fff;
+}
+
 /* More Container */
 
 .more__container {

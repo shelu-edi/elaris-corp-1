@@ -81,18 +81,21 @@
                 <span class="dot" onclick="currentSlide(3)"></span>
             </div>
 
-            <div class="solutions__container">
+            <!-- Network -->
+            <div class="solutions__head" id="network-head"> Network </div>
+            <div class="solutions__container" id="network">
                 {% for solution in solutions %}
+                    {% if solution.solution_category == 'Network' %}
                     <div class="solutions__wrapper">
                         <div class="solutions__card">                            
                             <div class="div__1">
-                                <div class="solutions__name">
+                                <div class="solutions__name" id="network-name">
                                     {{ solution.name }}    
                                 </div>                            
                             </div>
                             <div class="div__2">
-                                <img  class="solutions__image" src="{{ solution.img.url }}" alt="sol-img"> 
-                                <div class="solutions__desc">
+                                <img  class="solutions__image" src="{{ solution.img.url }}" alt="sol-img" id="network-img"> 
+                                <div class="solutions__desc" id="network-desc">
                                     {{ solution.desc }}
                                 </div>
                             </div>
@@ -100,7 +103,62 @@
                                 Some Stuff
                             </div> -->
                         </div>
-                    </div>            
+                    </div>
+                 {% endif %}
+                {% endfor %}
+            </div>
+
+            <!-- Digital Marketing -->
+            <div class="solutions__head" id="digital-head"> Digital Marketing </div>
+            <div class="solutions__container" id="digital-marketing">
+                {% for solution in solutions %}
+                    {% if solution.solution_category == 'Digital Marketing ' %}
+                    <div class="solutions__wrapper">
+                        <div class="solutions__card">
+                            <div class="div__1">
+                                <div class="solutions__name" id="digital-name">
+                                    {{ solution.name }}
+                                </div>
+                            </div>
+                            <div class="div__2">
+                                <img  class="solutions__image" src="{{ solution.img.url }}" alt="sol-img" id="data-img">
+                                <div class="solutions__desc" id="digital-desc">
+                                    {{ solution.desc }}
+                                </div>
+                            </div>
+                            <!-- <div class="div__3">
+                                Some Stuff
+                            </div> -->
+                        </div>
+                    </div>
+                 {% endif %}
+                {% endfor %}
+            </div>
+
+            <!-- Data Science & Analytics -->
+            <div class="solutions__head" id="data-head">  Data Science & Analytics </div>
+            <div class="solutions__container" id="data-science">
+                {% for solution in solutions %}
+                    {% if solution.solution_category == 'Data Science & Analytics' %}
+                    <div class="solutions__wrapper">
+                        <div class="solutions__card">
+                            <div class="div__1">
+                                <div class="solutions__name" id="data-name">
+                                    {{ solution.name }}
+                                </div>
+                            </div>
+                            <div class="div__2">
+                                <img  class="solutions__image" src="{{ solution.img.url }}" alt="sol-img" id="digital-img">
+                                <div class="solutions__desc" id="data-desc">
+                                    {{ solution.desc }}
+                                </div>
+                            </div>
+                            <!-- <div class="div__3">
+                                Some Stuff
+                            </div> -->
+                        </div>
+                    </div>
+                 {% endif %}
                 {% endfor %}
             </div>
 
