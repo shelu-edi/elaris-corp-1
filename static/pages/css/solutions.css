@@ -184,6 +184,31 @@
 	color: blue;
 }
 
+.solutions__info {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.solutions__info__desc {
+
+}
+
+.info__1 {
+
+}
+
+.info__2 {
+
+}
+
+.info__3 {
+
+}
+
+.solutions__info__img {
+
+}
+
 .solutions__container{	
 	display: grid;
     grid-template-columns: 1fr 1fr 1fr;
