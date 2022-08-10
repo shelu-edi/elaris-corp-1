@@ -415,11 +415,31 @@
 @media screen and (max-width:480px) {
 
 	.top__container {
-		height:350px;
+		height:450px;
 	}
 
 	.top__container img {
-		height:300px;
+		height:450px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.top__1 img, .top__3 img {
+		width:50px;
+		height:50px;
+		margin-left: 150px;
+	}
+
+	.top__3 {
+		margin-bottom: 50px;
+	}
+
+	.top__2 {
+		font-size: .8rem;
+		margin-left: 0;
+		padding-right: 10px;
+		height:50%;
+		width: 100%;
 	}
 
 	.top__head {
@@ -427,8 +447,8 @@
 	}
 
 	.top__desc {
-		font-size: 1rem;
 		text-align: justify;
+		padding: 0;
 		width: 100%;
 		display: grid;
 		grid-template-columns: 1fr;
@@ -477,7 +497,7 @@
 
 	.solutions__card {
 		height: 500px;
-		width: 100%;
+		width: 300px;
 	}
 
 	.solutions__name {
