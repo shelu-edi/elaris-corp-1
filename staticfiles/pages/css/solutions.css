@@ -93,10 +93,26 @@
 	margin: 20px 0 0 0;
 }
 
+#design-head {
+	color: #21D4FD;
+	margin: 20px 0 0 0;
+}
+
 #data-head {
 	color: #FF3CAC;	
 	margin: 20px 0 0 0;
 }
+
+#training-head {
+	color: #000046;
+	margin: 20px 0 0 0;
+}
+
+#blockchain-head {
+	color: #0052D4;
+	margin: 20px 0 0 0;
+}
+
 
 .solutions__info {
 	display: grid;
@@ -135,12 +151,35 @@
 	color: #EE74E1;
 }
 
+#design-info1 {
+	color: #B721FF;
+}
+
+#design-info1-2 {
+	color: #21D4FD;
+}
+
 #data-info1 {
 	color: #FF6A88;
 }
 
 #data-info1-2 {
 	color: #FF99AC;
+}
+
+#training-info1 {
+	color: #1cb5e0;
+}
+
+#training-info1-2 {
+	color: #000046;
+
+}#blockchain-info1 {
+	color: #9CECFB;
+}
+
+#blockchain-info1-2 {
+	color: #65C7F7;
 }
 
 .info__2 {
@@ -157,8 +196,19 @@
 	color: #EE74E1;
 }
 
+#design-info2 {
+	color: #21D4FD;
+}
+
 #data-info2 {
 	color: #FF99AC;
+}
+
+#training-info2 {
+	color:#1cb5e0;
+}
+#blockchain-info2 {
+	color:#0052D4;
 }
 
 .info__3 {
@@ -198,6 +248,19 @@
 	color: #EE74E1;	
 }
 
+#design-info3 {
+	background: #21D4FD;
+}
+
+#design-info3:hover {
+	background: #fff;
+	border: 1px solid #B721FF;
+}
+
+#design-info3:hover a{
+	color: #B721FF;
+}
+
 #data-info3 {
 	background: #FF99AC;
 }
@@ -209,6 +272,32 @@
 
 #data-info3:hover a{
 	color: #FF99AC;	
+}
+
+#training-info3 {
+	background: #000046;
+}
+
+#training-info3:hover {
+	background: #fff;
+	border: 1px solid #1cb5e0;
+}
+
+#training-info3:hover a{
+	color: #000046;
+}
+
+#blockchain-info3 {
+	background: #0052D4;
+}
+
+#blockchain-info3:hover {
+	background: #fff;
+	border: 1px solid #65C7F7;
+}
+
+#blockchain-info3:hover a{
+	color: #0052D4;
 }
 
 
@@ -258,7 +347,7 @@
 	/* border: 1px solid black; */
 	justify-content: center;
 	animation: fadeIn 2s;
-	background: rgba(83, 82, 108, .1);
+	/*background: rgba(83, 82, 108, .01);*/
 	border-radius: 5px;
 	box-shadow: 2px 1px 2px #66aec7;
 }
@@ -297,6 +386,18 @@
 	color: #784BA0;
 }
 
+#design-name {
+	color: #21d4fd;
+}
+
+#training-name {
+	color: #1cb5e0;
+}
+
+#blockchain-name {
+	color: #65C7F7;
+}
+
 .solutions__image {
 	width: 150px;
 	height:150px;
@@ -323,6 +424,18 @@
 
 #data-desc {
 	color: #2B86C5;
+}
+
+#design-desc {
+	color: #b721ff;
+}
+
+#training-desc {
+	color: #000046;
+}
+
+#blockchain-desc {
+	color: #0052D4v;
 }
 
 /* Contact */

@@ -164,7 +164,7 @@ hr {
         margin-bottom: 2rem;
     }
 
-    .wesite__rights {
+    .website__rights {
         margin-bottom: 2rem;
     }
 
@@ -178,6 +178,12 @@ hr {
 
     .vl {
         display: none;
+    }
+
+    #contact-us {
+        padding-top: 20vh;
+        width: 40vh;
+        border: 1px solid black;
     }
 
 }
@@ -206,6 +212,10 @@ hr {
 
     .back-to-top .btn-dark {
         bottom: 50px;
+    }
+
+    .footer__logo  img{
+        height: 10px;
     }
 
 
