@@ -12,31 +12,26 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
-
-from .local_settings import (
-    SECRET_KEY, DEBUG, ALLOWED_HOSTS, DB_CONFIG,
-    TEMPLATES_DIR, STATICFILES_DIR, STATIC_DIR, MEDIA_DIR, LOGS_DIR
-)
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-SETTINGS_DIR = os.path.dirname(os.path.abspath(__file__))
-BASE_DIR = os.path.dirname(SETTINGS_DIR)
-TEMPLATES_DIR = os.getenv('TEMPLATES_DIR', TEMPLATES_DIR)
-STATICFILES_DIR = os.getenv('STATICFILES_DIR', STATICFILES_DIR)
-STATIC_DIR = os.getenv('STATIC_DIR', STATIC_DIR)
-MEDIA_DIR = os.getenv('MEDIA_DIR', MEDIA_DIR)
-LOGS_DIR = os.getenv('LOGS_DIR', LOGS_DIR)
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = SECRET_KEY
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = DEBUG
+SECRET_KEY = 'django-insecure-w*j8k*s3d)-mpr(&8gt%0_bp)tri2j$!c4ic50=-*b17(!9n$&'
 
-ALLOWED_HOSTS = ALLOWED_HOSTS
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
+
+# ALLOWED_HOSTS = ['127.0.0.1', 'elaris.onrender.com']
+# ALLOWED_HOSTS = ['https://pdelaris.herokuapp.com/']
+ALLOWED_HOSTS = ['*']
+
+
 
 
 # Application definition
@@ -60,6 +55,7 @@ INSTALLED_APPS = [
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -94,7 +90,10 @@ WSGI_APPLICATION = 'elaris.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': os.getenv('DB_CONFIG', DB_CONFIG)
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
 
 
@@ -140,11 +139,20 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+STATIC_ROOT = BASE_DIR / "static"
 STATIC_URL = '/static/'
-STATIC_ROOT = STATIC_DIR  # production, don't forget to run collectstatic
-STATICFILES_DIRS = [STATICFILES_DIR, ]  # development environment
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = MEDIA_DIR
+MEDIA_ROOT = os.path.join(BASE_DIR, 'img')
+MEDIA_URL = '/img/'
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.ionos.com'
+EMAIL_PORT = 25
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'contact@pdelaris.com' 
+EMAIL_HOST_PASSWORD = 'Nuwangi1!'
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
