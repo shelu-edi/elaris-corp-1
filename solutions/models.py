@@ -8,9 +8,13 @@ solution_type = (
 	)
 
 solution_category = (
-		('Network', 'Network'),
+		('Network Solutions', 'Network Solutions'),
 		('Digital Marketing ', 'Digital Marketing '),
-		('Data Science & Analytics', 'Data Science & Analytics')
+		('Data Analytics', 'Data Analytics'),
+		('Design & Development', 'Design & Development'),
+		('Big Data Science & AI', 'Big Data Science & AI'),
+		('Training and Development', 'Training and Development '),
+		('Blockchain Technology', 'Blockchain Technology'),
 	)
 
 
