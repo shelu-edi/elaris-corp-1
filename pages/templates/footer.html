@@ -25,32 +25,35 @@
             <div class="footer__link--wrapper">
                 <div class="footer__link--items">
                     <h2>About Us</h2>
-                    <a href="{% url 'about_view' %}">Who We Are </a>
-                    <a href="{% url 'about_view' %}"> What We do </a>
-                    <a href="{% url 'about_view' %}#faq-wrapper"> FAQ </a>
-                    <a href="{% url 'about_view' %}"> Terms of services </a>
+                    <a href="{% url 'about_view' %}#who-we-are">Who We Are </a>
+                    <a href="{% url 'about_view' %}#employee"> Our Crew </a>
+                    <a href="{% url 'about_view' %}#locations"> Our Locations </a>
+                    <a href="{% url 'about_view' %}#partners_div"> Our Partners </a>
                 </div>
-                <div class="vl"></div>
-                <div class="footer__link--items">
+                <!-- <div class="vl"></div> -->
+                <div class="footer__link--items" id="contact-us">
                     <h2>Contact Us</h2>
-                    <a href="#"> Contact</a>
-                    <a href="#"> Support </a>
+                    <a href="{% url 'contact_view' %}"> Contact</a>
+                    <a href="{% url 'contact_view' %}"> Support </a>
                 </div>
-                <div class="vl"></div>
+                <!-- <div class="vl"></div> -->
             </div>
             <div class="footer__link--wrapper">
                 <div class="footer__link--items">
                     <h2>What We Have</h2>
-                    <a href="#" > Solutions </a>
-                    <a href="#"> Solutions </a>
-                    <a href="#"> Solutions </a>
+                    <a href="{% url 'solutions_view' %}#network-head" > Network Solutions </a>
+                    <a href="{% url 'solutions_view' %}#digital-head"> Digital Marketing </a>
+                    <a href="{% url 'solutions_view' %}#design-head"> Design & Development </a>
+                    <a href="{% url 'solutions_view' %}#data-head"> Data Science & Analytics </a>
+                    <a href="{% url 'solutions_view' %}#training-head"> Training & Development </a>
+                    <a href="{% url 'solutions_view' %}#blockchain-head"> BlockChain Technology </a>
                 </div>
-                <div class="vl"></div>
+                <!-- <div class="vl"></div> -->
                 <div class="footer__link--items">
                     <h2>Social Media</h2>
                     <a href="/"> Instagram </a>
                     <a href="/"> Facebook </a>
-                    <a href="/"> Youtube </a>
+                    <a href="/"> LinkedIn </a>
                     <a href="/"> Twitter </a>
                 </div>
             </div>
@@ -58,15 +61,18 @@
         <section class="social__media">
             <div class="social__media--wrap">
                 <div class="footer__logo">
-                    <img src="{% static 'pages/img/logo_icon.png' %}" />
+                    <img src="{% static 'pages/img/pdec-logo-white.png' %}" />
                 </div>
-                <p class="wesite__rights">Elaris©, All Right Reserved Elaris</p>
+                <p class="website__rights">Elaris©, All Right Reserved Elaris</p>
                 <div class="social__icons">
-                    <a href="/" class="social__icon--link" target="_blank">
+                    <a href="https://www.facebook.com/pdelarisco" class="social__icon--link" target="_blank">
                         <i class="fab fa-facebook"></i>
                     </a>
-                    <a href="https://www.instagram.com/sparqtech/" class="social__icon--link"  target="_blank">
+                    <a href="https://www.instagram.com/pd.elaris/" class="social__icon--link"  target="_blank">
                         <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/pdelaris/" class="social__icon--link"  target="_blank">
+                        <i class="fab fa-linkedin"></i>
                     </a>
                 </div>
             </div>

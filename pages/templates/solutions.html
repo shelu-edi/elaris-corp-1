@@ -24,26 +24,20 @@
     {% block content %}
         <div class="main__container">
             <div class="top__container">
+                <!-- <img src="{% static 'pages/img/sol_back.png' %}" alt="top__img"> -->
                     <div class="top__head">
                         Elaris Solutions
-                    </div>
-                <img src="{% static 'pages/img/back_1.png' %}" alt="">               
+                    </div>             
                <div class="top__desc">
-                   <div class="top__1">
-                       <img class="" alt="top-img" src="{% static 'pages/img/cloud-computing.png' %}" />
-                   </div>
                    <div class="top__2">
                        dynamic technological solutions provider that takes pride in its capacity to offer specialised solutions to address specific company needs.
-                   </div>
-                   <div class="top__3">
-                       <img class="" alt="top-img" src="{% static 'pages/img/design-software.png' %}" />
                    </div>
                </div>
             </div>  
 
             <!-- Network -->
 
-            <div class="solutions__head" id="network-head" data-aos="fade"> Network </div>
+            <div class="solutions__head" id="network-head" data-aos="fade"> Network Solutions</div>
             <div class="solutions__info" id="network-info">
                 <div class="info__wrapper">
                     <div class="solutions__info__desc" id="network-info-desc">
@@ -65,9 +59,9 @@
                     </lord-icon>                    
                 </div>
             </div>
-            <div class="solutions__container" id="network" data-aos="fade">
+            <div class="solutions__container" id="network">
                 {% for solution in solutions %}
-                    {% if solution.solution_category == 'Network' %}
+                    {% if solution.solution_category == 'Network Solutions' %}
                     <div class="solutions__wrapper">
                         <div class="solutions__card">                            
                             <div class="div__1">
@@ -88,7 +82,7 @@
             </div>
 
             <!-- Digital Marketing -->
-            <div class="solutions__head" id="digital-head"> Digital Marketing </div>
+            <!-- <div class="solutions__head" id="digital-head"> Digital Marketing </div>
             <div class="solutions__info" id="digital-info">
             <div class="info__wrapper">
                 <div class="solutions__info__desc" id="digital-info-desc">
@@ -126,9 +120,55 @@
                                     {{ solution.desc }}
                                 </div>
                             </div>
-                            <!-- <div class="div__3">
+                             <div class="div__3">
                                 Some Stuff
                             </div> -->
+                        <!-- </div> -->
+                    <!-- </div>
+                 {% endif %}
+                {% endfor %}
+            </div> -->
+
+            <!-- Design & Development -->
+
+            <div class="solutions__head" id="design-head" data-aos="fade"> Design & Development </div>
+            <div class="solutions__info" id="design-info">
+                <div class="info__wrapper">
+                    <div class="solutions__info__desc" id="network-info-desc">
+                        <div class="info__1__1" id="design-info1"> Design & Develop </div>
+                        <div class="info__1__2" id="design-info1-2">Your Next Big Thing </div>
+                        <div class="info__2" id="design-info2">With Us</div>
+                    </div>
+                    <div class="info__3" id="design-info3">
+                        <a href="{% url 'contact_view' %}"> Contact Us </a>
+                    </div>
+                </div>
+                <div class="solutions__gif">
+                    <lord-icon
+                        src="https://cdn.lordicon.com/nobciafz.json"
+                        trigger="loop"
+                        delay="3000"
+                        colors="primary:#21d4fd,secondary:#b721ff"
+                        style="width:250px;height:250px">
+                    </lord-icon>
+                </div>
+            </div>
+            <div class="solutions__container" id="design">
+                {% for solution in solutions %}
+                    {% if solution.solution_category == 'Design & Development' %}
+                    <div class="solutions__wrapper">
+                        <div class="solutions__card">
+                            <div class="div__1">
+                                <div class="solutions__name" id="design-name">
+                                    {{ solution.name }}
+                                </div>
+                            </div>
+                            <div class="div__2">
+                                <img  class="solutions__image" src="{{ solution.img.url }}" alt="sol-img" id="design-img">
+                                <div class="solutions__desc" id="design-desc">
+                                    {{ solution.desc }}
+                                </div>
+                            </div>
                         </div>
                     </div>
                  {% endif %}
@@ -183,23 +223,115 @@
                 {% endfor %}
             </div>
 
-            <!-- Contact -->
-            <div class="contact__div">
-                <div class="contact__desc">
-                    <div class="contact__top">
-                        <div class="contact__top__1">
-                            Interested ?
-                        </div>
-                        <div class="contact__top__2">
-                            Let Us Know
-                        </div>
+            <!-- Training & Development -->
+
+            <div class="solutions__head" id="training-head" data-aos="fade"> Training & Development </div>
+            <div class="solutions__info" id="training-info">
+                <div class="info__wrapper">
+                    <div class="solutions__info__desc" id="training-info-desc">
+                        <div class="info__1__1" id="training-info1"> Improve Your </div>
+                        <div class="info__1__2" id="training-info1-2"> Standards </div>
+                        <div class="info__2" id="training-info2">With Us</div>
                     </div>
-                    <div class="contact__btn">
-                        <a href="{% url 'contact_view' %}" title="contact-btn">Contact Us</a>
+                    <div class="info__3" id="training-info3">
+                        <a href="{% url 'contact_view' %}"> Contact Us </a>
                     </div>
                 </div>
-                <img src="{% static 'pages/img/phone-call.png' %}" alt="img-1">
+                <div class="solutions__gif">
+                    <lord-icon
+                        src="https://cdn.lordicon.com/zpxybbhl.json"
+                        trigger="loop"
+                        delay="3000"
+                        colors="primary:#000046,secondary:#1cb5e0"
+                        style="width:250px;height:250px">
+                    </lord-icon>
+                </div>
             </div>
+            <div class="solutions__container" id="training">
+                {% for solution in solutions %}
+                    {% if solution.solution_category == ' Training and Development' %}
+                    <div class="solutions__wrapper">
+                        <div class="solutions__card">
+                            <div class="div__1">
+                                <div class="solutions__name" id="training-name">
+                                    {{ solution.name }}
+                                </div>
+                            </div>
+                            <div class="div__2">
+                                <img  class="solutions__image" src="{{ solution.img.url }}" alt="sol-img" id="training-img">
+                                <div class="solutions__desc" id="training-desc">
+                                    {{ solution.desc }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 {% endif %}
+                {% endfor %}
+            </div>
+
+            <!-- Training & Development -->
+
+            <div class="solutions__head" id="blockchain-head" data-aos="fade"> BlockChain Technology </div>
+            <div class="solutions__info" id="blockchain-info">
+                <div class="info__wrapper">
+                    <div class="solutions__info__desc" id="blockchain-info-desc">
+                        <div class="info__1__1" id="blockchain-info1"> Step Into  </div>
+                        <div class="info__1__2" id="blockchain-info1-2"> The New World </div>
+                        <div class="info__2" id="blockchain-info2">With Us</div>
+                    </div>
+                    <div class="info__3" id="blockchain-info3">
+                        <a href="{% url 'contact_view' %}"> Contact Us </a>
+                    </div>
+                </div>
+                <div class="solutions__gif">
+                    <lord-icon
+                        src="https://cdn.lordicon.com/vlupvdhl.json"
+                        trigger="loop"
+                        delay="3000"
+                        colors="primary:#0052d4,secondary:#65c7f7"
+                        style="width:250px;height:250px">
+                    </lord-icon>
+                </div>
+            </div>
+            <div class="solutions__container" id="blockchain">
+                {% for solution in solutions %}
+                    {% if solution.solution_category == 'Blockchain Technology' %}
+                    <div class="solutions__wrapper">
+                        <div class="solutions__card">
+                            <div class="div__1">
+                                <div class="solutions__name" id="blockchain-name">
+                                    {{ solution.name }}
+                                </div>
+                            </div>
+                            <div class="div__2">
+                                <img  class="solutions__image" src="{{ solution.img.url }}" alt="sol-img" id="blockchain-img">
+                                <div class="solutions__desc" id="blockchain-desc">
+                                    {{ solution.desc }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 {% endif %}
+                {% endfor %}
+            </div>
+
+            <!-- Contact -->
+{#            <div class="contact__div">#}
+{#                <div class="contact__desc">#}
+{#                    <div class="contact__top">#}
+{#                        <div class="contact__top__1">#}
+{#                            Interested ?#}
+{#                        </div>#}
+{#                        <div class="contact__top__2">#}
+{#                            Let Us Know#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="contact__btn">#}
+{#                        <a href="{% url 'contact_view' %}" title="contact-btn">Contact Us</a>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <img src="{% static 'pages/img/phone-call.png' %}" alt="img-1">#}
+{#            </div>#}
         </div>
     {% endblock %}
 
